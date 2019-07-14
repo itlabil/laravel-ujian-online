@@ -1,16 +1,18 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\User;
+use App\Soal;
+use App\Pengaturan;
+use App\Nilai;
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
+
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        factory(User::class,20)->create();
+        factory(Soal::class,20)->create();
+        factory(Pengaturan::class,20)->create();
+        factory(Nilai::class,20)->create();
     }
 }
